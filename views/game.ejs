@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/stylesheets/main.css" rel="stylesheet"/>
+    <title>Hangman!</title>
+</head>
+<body>
+<p class=welcome-message>Welcome to Hangman!</p>
+<div class="container">
+    <% console.log(results.mistakes)%>
+    <% switch(results.mistakes){
+        case 0:%>
+            <div style="float:right;width:256px;height:200px;background-color:white;"></div>
+        <%  break;
+
+        case 1:%>
+            <img src="/image/Hangman-0.png"/>
+        <%  break;
+
+        case 2:%>
+            <img src="/image/Hangman-1.png"/>
+        <%  break;
+
+        case 3:%>
+            <img src="/image/Hangman-2.png"/>
+        <%  break;
+
+        case 4:%>
+            <img src="/image/Hangman-3.png"/>
+        <%  break;
+
+        case 5:%>
+            <img src="/image/Hangman-4.png"/>
+        <%  break;
+
+        case 6:%>
+            <img src="/image/Hangman-5.png"/>
+        <%  break;
+
+        case 7:%>
+            <img src="/image/Hangman-6.png"/>
+        <%  break;
+    }%>
+
+    <div class="info-container">
+        <%= results.hidden_word %><br><%=results.word%><br>
+        You are currently viewing Game
+        <%=results.game_id%>
+        <br>
+        <p>You have made <%= results.guesses %>
+            Guesses<br>
+            You have made <%= results.mistakes %>
+            Incorrect Guesses<br>
+        </p>
+    </div>
+    <br>
+    <form action="/game" method="post">
+        <input type="text" name="guess" pattern="[A-Za-z]{1}" title="Single Letter Only!" maxlength="1"
+               placeholder="Guess A Character!" required>
+        <input name="newGame" type="hidden" value="false" readonly>
+        <input name="game_id" type="hidden" value="<%= results.game_id %>" readonly>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/welcome">Click here to return to welcome and start a new game.</a>
+</div>
+</body>
+</html>

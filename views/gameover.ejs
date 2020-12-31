@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/stylesheets/main.css" rel="stylesheet"/>
+    <title>Hangman!</title>
+</head>
+<body>
+<p class=welcome-message>Welcome to Hangman!</p>
+<div class="container" style="height:300px;">
+    <% if(endInfo.win){ %>
+        <img src="/image/Sun-256.png"/>
+        
+      <% } else{ %>  
+        <img src="/image/Hangman-7.png"/>
+     <% } %>
+    <p>Game Over!<br> You have
+        <% if(endInfo.win){ %>
+            won! Congrats :D
+          <% } else{ %>  
+            lost. Try again next time!
+         <% } %>
+        <br><br>
+        Your word was <%=endInfo.word%>
+    </p>
+    <br>
+    <a href="/">Click here to return to welcome and start a new game.</a>
+</div>
+</body>
+</html>

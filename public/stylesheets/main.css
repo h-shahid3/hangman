@@ -1,0 +1,50 @@
+body {
+    background-color: #f2f6e9;
+    color:black;
+    font-size: 16px;
+    line-height: 26px;
+    text-indent: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+b{
+    letter-spacing:10px;
+}
+img{
+    float:right;
+}
+.welcome-message{
+    border-bottom:solid black;
+}
+.my-info{
+    width:600px;
+    border-bottom:solid black 1px;
+}
+.game-rules{
+    width:600px;
+    text-indent:0px;
+    line-height:40px;
+}
+#header{
+  text-align: center;
+  font-size: 22px;
+  line-height: 0px;
+}
+.container {
+    background: #e9e9e9;
+    padding: 30px;
+}
+#review-title{
+  font-size: 18px;
+  line-height: 40px;
+  border-bottom: solid blue;
+}
+#review-info{
+  display: inline;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  padding: 15px 8px;
+  text-transform: uppercase;
+  text-indent: 0px;
+}

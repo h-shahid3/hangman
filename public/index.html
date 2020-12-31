@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="stylesheets/main.css" rel="stylesheet"/>
+    <script src = "scripts/home.js"></script>
+    <title>Hangman!</title>
+</head>
+<body>
+<img src="/image/Sun-256.png"/>
+<p class="welcome-message">Welcome to Hangman! :D</p>
+<p class="my-info">
+    Creator: Hassan Shahid
+</p>
+<ul class="game-rules">
+    Rules:
+    <li>Guess a letter belonging to the random word assigned to your game!</li>
+    <li>You win by guessing each and every letter of the word.</li>
+    <li>You lose if you make more than seven incorrect letter guesses.</li>
+    <li>You can resume a game by writing its ID after /game in the url! (eg: '/game/1)</li>
+</ul>
+
+<form style="border-left:solid #f2f6e9 30px;" action="/game" method="post">
+    <input name="newGame" type="hidden" value="true" readonly>
+    <input style="height:40px;" type="submit" value="Click here to start a new Game!">
+</form>
+</body>
+</html>
